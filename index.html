@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Younis Portfolio - Smart Solutions</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Nunito:wght@400;600;700&family=Merriweather:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="themes.css" />
+    <link rel="stylesheet" href="layout.css" />
+</head>
+<body>
+
+    <!-- =============
+    {
+        id: 4,
+        title: "Corporate Brochure",
+        category: "static",
+        embedUrl: "https://example-corporate.com",
+        thumbnail: "assets/corporate-logo.png",
+        theme: "theme-minimal",
+        description: "Clean, minimal corporate presence"
+    },
+    {
+        id: 5,
+        title: "Task Manager App",
+        category: "webapp",
+        embedUrl: "https://awtadalfahd-ec.com",
+        thumbnail: "assets/taskmanager-logo.png",
+        theme: "theme-cyber",
+        description: "Productivity tool with real-time updates"
+    },
+    {
+        id: 6,
+        title: "Consulting Services",
+        category: "services",
+        embedUrl: "https://example-consulting.com",
+        thumbnail: "assets/consulting-logo.png",
+        theme: "theme-luxury",
+        description: "Luxury brand for high-end consulting"
+    },
+    {
+        id: 7,
+        title: "Restaurant Menu",
+        category: "static",
+        embedUrl: "https://example-restaurant.com",
+        thumbnail: "assets/restaurant-logo.png",
+        theme: "theme-organic",
+        description: "Elegant menu with food photography"
+    },
+    {
+        id: 8,
+        title: "Analytics Dashboard",
+        category: "webapp",
+        embedUrl: "https://example-analytics.com",
+        thumbnail: "assets/analytics-logo.png",
+        theme: "theme-cyber",
+        description: "Real-time analytics with charts"
+    }
+];============================ -->
+    <!-- 1. STICKY HEADER                          -->
+    <!-- ========================================= -->
+    <header id="main-header">
+        <div class="logo"><img src="https://res.cloudinary.com/o4uwuwtd/image/upload/v1793989055/ITDD.png" style="width: 5rem; height: auto;"></div>
+        <nav>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="static">Static Sites</button>
+            <button class="filter-btn" data-filter="webapp">Web Apps</button>
+            <button class="filter-btn" data-filter="services">Services</button>
+        </nav>
+    </header>
+
+    <!-- ========================================= -->
+    <!-- 2. MAIN GRID                             -->
+    <!-- ========================================= -->
+    <main id="grid-container">
+        <!-- Profile Card -->
+        <section id="profile-card">
+            <div class="avatar"><img src="https://res.cloudinary.com/o4uwuwtd/image/upload/v1793988576/vector.jpg" style="width: 10rem;"></div>
+            <h1><a href="https://y0niss.github.io/Business-Cards/"> Younis Ibrahim</a></h1>
+            <p class="tagline">Web Developer &amp; Digital Solutions Specialist</p>
+            <p class="bio">
+                I’m a passionate Web Developer focused on building modern, responsive, and user-friendly websites and web applications. I combine development skills with a strong UI/UX mindset to create digital experiences that are both visually appealing and functional. I work with technologies such as HTML, CSS, JavaScript, PHP, WordPress, and modern web development frameworks. I enjoy turning ideas into clean, efficient, and scalable digital solutions while continuously learning and exploring new technologies. I’m always looking for opportunities to build better products, solve problems through technology, and create web experiences that make an impact.
+            </p>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </section>
+
+        <!-- Project Grid -->
+        <div id="project-grid"></div>
+    </main>
+
+    <!-- ========================================= -->
+    <!-- 3. FIXED WHATSAPP BUTTON                 -->
+    <!-- ========================================= -->
+    <a href="https://wa.me/+201123674523?text=Hi!%20I%20saw%20your%20portfolio" 
+       target="_blank" 
+       id="whatsapp-fixed">
+       💬 WhatsApp
+    </a>
+
+    <!-- ========================================= -->
+    <!-- 4. IFRAME MODAL                          -->
+    <!-- ========================================= -->
+    <div id="modal-overlay">
+        <div id="modal-content">
+            <button id="modal-close">✕</button>
+            <iframe id="modal-iframe" src="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- 5. SCRIPTS                               -->
+    <!-- ========================================= -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

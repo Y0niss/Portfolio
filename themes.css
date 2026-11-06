@@ -1,0 +1,160 @@
+ /* ============================================
+   THEME SYSTEM - Each project gets a unique vibe
+   ============================================ */
+
+/* ---------- THEME 1: MINIMALIST ---------- */
+.theme-minimal {
+    --primary: #1a1a1a;
+    --primary-light: #3a3a3a;
+    --bg: #f8f8f8;
+    --bg-card: #ffffff;
+    --text: #111111;
+    --text-muted: #666666;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    --border-radius: 8px;
+    --border-color: #e0e0e0;
+    --font-family: 'Inter', sans-serif;
+    --accent-color: #2563eb;
+}
+
+/* ---------- THEME 2: PLAYFUL ---------- */
+.theme-playful {
+    --primary: #ff2d75;
+    --primary-light: #ff6b9d;
+    --bg: #fff0f5;
+    --bg-card: #ffffff;
+    --text: #2d0a1e;
+    --text-muted: #7a4a5e;
+    --card-shadow: 0 8px 0 #00d4ff, 0 8px 30px rgba(255, 45, 117, 0.15);
+    --border-radius: 40px 12px 40px 12px;
+    --border-color: #ffd4e4;
+    --font-family: 'Nunito', sans-serif;
+    --accent-color: #00d4ff;
+}
+
+/* ---------- THEME 3: ORGANIC ---------- */
+.theme-organic {
+    --primary: #2d6a4f;
+    --primary-light: #409f7a;
+    --bg: #f4f1e6;
+    --bg-card: #ffffff;
+    --text: #1e3a2f;
+    --text-muted: #5a7a6a;
+    --card-shadow: 0 8px 30px rgba(45, 106, 79, 0.12);
+    --border-radius: 30px 4px 30px 4px;
+    --border-color: #d4dcc8;
+    --font-family: 'Merriweather', serif;
+    --accent-color: #2d6a4f;
+}
+
+/* ---------- THEME 4: CYBER/TECH ---------- */
+.theme-cyber {
+    --primary: #00f0ff;
+    --primary-light: #66f5ff;
+    --bg: #0b0e1a;
+    --bg-card: #13182b;
+    --text: #e0f2fe;
+    --text-muted: #8899bb;
+    --card-shadow: 0 0 40px rgba(0, 240, 255, 0.06), inset 0 0 40px rgba(0, 240, 255, 0.02);
+    --border-radius: 4px;
+    --border-color: #1a2a4a;
+    --font-family: 'Fira Code', monospace;
+    --accent-color: #00f0ff;
+}
+
+/* ---------- THEME 5: LUXURY (BONUS) ---------- */
+.theme-luxury {
+    --primary: #c9a84c;
+    --primary-light: #e8d48b;
+    --bg: #0a0806;
+    --bg-card: #1a1510;
+    --text: #f5efe6;
+    --text-muted: #a89880;
+    --card-shadow: 0 8px 40px rgba(201, 168, 76, 0.08);
+    --border-radius: 16px;
+    --border-color: #3a3028;
+    --font-family: 'Merriweather', serif;
+    --accent-color: #c9a84c;
+}
+
+/* ============================================
+   HOW THEMES ARE APPLIED
+   ============================================
+   When a user clicks a project, JavaScript adds
+   one of these classes to the <body> tag.
+   
+   Example: <body class="theme-playful">
+   
+   All elements inside the modal and cards will
+   inherit these CSS variables.
+   ============================================ */
+
+/* Apply theme to modal background when active */
+.theme-minimal #modal-content {
+    background: var(--bg-card);
+}
+.theme-playful #modal-content {
+    background: var(--bg-card);
+}
+.theme-organic #modal-content {
+    background: var(--bg-card);
+}
+.theme-cyber #modal-content {
+    background: var(--bg-card);
+}
+.theme-luxury #modal-content {
+    background: var(--bg-card);
+}
+
+/* Apply theme to project cards on hover */
+.project-card {
+    transition: all 0.3s ease;
+}
+
+/* Each theme styles the cards differently */
+.theme-playful .project-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 8px 0 #00d4ff, 0 12px 40px rgba(255, 45, 117, 0.2);
+}
+
+.theme-organic .project-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 8px 30px rgba(45, 106, 79, 0.2);
+}
+
+.theme-cyber .project-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 40px rgba(0, 240, 255, 0.1), inset 0 0 40px rgba(0, 240, 255, 0.03);
+}
+
+.theme-luxury .project-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 8px 40px rgba(201, 168, 76, 0.15);
+}
+
+.theme-minimal .project-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Body background changes when theme is active */
+.theme-minimal body {
+    background: var(--bg);
+    color: var(--text);
+}
+.theme-playful body {
+    background: var(--bg);
+    color: var(--text);
+}
+.theme-organic body {
+    background: var(--bg);
+    color: var(--text);
+}
+.theme-cyber body {
+    background: var(--bg);
+    color: var(--text);
+}
+.theme-luxury body {
+    background: var(--bg);
+    color: var(--text);
+}

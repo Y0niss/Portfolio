@@ -1,0 +1,227 @@
+ /* ---------- GRID CONTAINER ---------- */
+#grid-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 28px;
+}
+
+/* ---------- PROFILE CARD ---------- */
+#profile-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    padding: 36px 28px;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+    backdrop-filter: blur(4px);
+    transition: all 0.4s ease;
+}
+
+#profile-card .avatar {
+    font-size: 4.5rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+#profile-card h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+#profile-card .tagline {
+    color: #3b82f6;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+#profile-card .bio {
+    color: #aaa;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 6px 16px;
+    border: 1px solid #333;
+    border-radius: 30px;
+    transition: all 0.2s;
+}
+
+.social-links a:hover {
+    color: #fff;
+    border-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+}
+
+/* ---------- PROJECT GRID ---------- */
+#project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* Individual Project Card */
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.02), transparent);
+    pointer-events: none;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.project-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #1a1a1a;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #555;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+.project-category {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------- VIEW PROJECT BADGE ---------- */
+.project-card::after {
+    content: '🔍 Preview';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(59, 130, 246, 0.15);
+    color: #3b82f6;
+    font-size: 0.7rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    z-index: 2;
+}
+
+.project-card:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- EMPTY STATE ---------- */
+#project-grid:empty::after {
+    content: 'No projects found';
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #666;
+    padding: 60px 0;
+    font-size: 1.1rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+    #grid-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    #profile-card {
+        position: relative;
+        top: 0;
+        text-align: center;
+    }
+    .social-links {
+        justify-content: center;
+    }
+    #profile-card .avatar {
+        margin: 0 auto 16px;
+    }
+}
+
+@media (max-width: 700px) {
+    #grid-container {
+        padding: 0 16px;
+    }
+    #project-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    #profile-card {
+        padding: 24px 20px;
+    }
+    #profile-card h1 {
+        font-size: 1.6rem;
+    }
+    .project-card {
+        padding: 16px;
+    }
+    .project-thumb {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    #project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
