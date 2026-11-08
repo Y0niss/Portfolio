@@ -8,7 +8,7 @@ const projects = [
         title: "Awtad Al Fahd - Main Site",
         category: "static",
         embedUrl: "https://awtadalfahd-ec.com",
-        thumbnail: "assets/afec-logo.png", // <-- Put your logo image here
+        thumbnail: "https://res.cloudinary.com/o4uwuwtd/image/upload/v1794144833/logo.png", // <-- Put your logo image here
         theme: "Modern Mininize",
         description: "Main corporate website for Awtad Al Fahd"
     },
