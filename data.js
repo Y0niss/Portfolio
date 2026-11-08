@@ -30,4 +30,13 @@ const projects = [
         theme: "More Than one theme",
         description: "Playful, colorful design for artists"
     },
+     {
+        id: 3,
+        title: "Static WebSite for Constraction Company",
+        category: "static",
+        embedUrl: "https://y0niss.github.io/Awtad-Alfahd-Old/",
+        thumbnail: "https://res.cloudinary.com/o4uwuwtd/image/upload/v1793987936/logo.png",
+        theme: "More Than one theme",
+        description: "Minimalizm clasic website"
+    },
  ]
