@@ -8,7 +8,7 @@ const projects = [
         title: "Awtad Al Fahd - Main Site",
         category: "static",
         embedUrl: "https://awtadalfahd-ec.com",
-        thumbnail: "https://res.cloudinary.com/o4uwuwtd/image/upload/v1794144833/logo.png", // <-- Put your logo image here
+        thumbnail: "https://res.cloudinary.com/o4uwuwtd/image/upload/v1793988583/AFEC-logo.png", // <-- Put your logo image here
         theme: "Modern Mininize",
         description: "Main corporate website for Awtad Al Fahd"
     },
@@ -31,11 +31,11 @@ const projects = [
         description: "Playful, colorful design for artists"
     },
      {
-        id: 3,
+        id: 4,
         title: "Static WebSite for Constraction Company",
         category: "static",
         embedUrl: "https://y0niss.github.io/Awtad-Alfahd-Old/",
-        thumbnail: "https://res.cloudinary.com/o4uwuwtd/image/upload/v1793987936/logo.png",
+        thumbnail: "https://res.cloudinary.com/o4uwuwtd/image/upload/v1794144475/white-logo.webp",
         theme: "More Than one theme",
         description: "Minimalizm clasic website"
     },
